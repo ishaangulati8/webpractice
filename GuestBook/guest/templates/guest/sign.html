@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Ishaan Gulati</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        a {
+            font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+        }
+
+        .container{
+            text-align: center;
+        }
+        .row{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Sign IN Here!</h1>
+    </div>
+</div>
+<div class="container" align="center">
+<div class="row">
+    <div class="col-sm-8">
+     <form class="form-signin" method="POST" action="{% url 'sign' %}">
+         {% csrf_token %}
+    <div class ="form-group" id ="f1">
+       <label for ="imputName" class="sr-only">Name:</label> {{ form.name }}
+        <label for="comment" class="sr-only">Comment:</label>
+         {{ form.comment }}
+        <button type="submit" class="btn btn-default" style="background-color: blueviolet;text-color: white">Submit</button>
+    </div>
+    </form>
+    </div>
+</div></div>
+</body>
+</html>
